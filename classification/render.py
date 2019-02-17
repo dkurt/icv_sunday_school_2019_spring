@@ -1,10 +1,11 @@
+# C:\Users\[user]\AppData\Local\Android\sdk\platform-tools\adb.exe forward tcp:43656 tcp:43656
 import socket
 import struct
 import cv2 as cv
 import numpy as np
 
 s = socket.socket()
-s.connect(('', 43656))
+s.connect(('', 43656))  # It's OK to use an empty string as IP for Linux but for Windows use '127.0.0.1'
 
 def read(size):
     batchSize = 4096
